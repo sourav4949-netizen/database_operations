@@ -7,10 +7,10 @@ cursor=conn.cursor()
 
 cursor.execute('select * from emp')
 
-row = cursor.fetchone()
-while row is not None:
+rows = cursor.fetchall()
+print("Total number off records is:", cursor.rowcount)
+for row in rows:
     print(row)
-    row=cursor.fetchone()
 
 cursor.close()
 conn.close()
