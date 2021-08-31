@@ -14,6 +14,7 @@ def update(id):
             print("employee updated")
         except:
             conn.rollback
+            print("inside except block")
         finally:
             cursor.close()
             conn.close()
