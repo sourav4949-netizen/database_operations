@@ -8,7 +8,7 @@ cursor=conn.cursor()
 cursor.execute('select * from emp')
 
 rows = cursor.fetchall()
-print("Total number off records is:", cursor.rowcount)
+print("Total number of records is:", cursor.rowcount)
 for row in rows:
     print(row)
 
